@@ -1,5 +1,19 @@
 # uGW
 
+## ugwslb.m 
+**ugwslb.m** is a Matlab code computing the second lower bound of uGW of two ultrametric spaces with uniform probability measures.
+
+**Syntax:**
+```
+% d = ugwslb(u1,u2,p)
+%   u1 - ultrametric distance matrix
+%   u2 - ultrametric distance matrix
+%   p - real number >=1
+%
+% Returns:
+%   d - pth-uGW-second lower bound between u1 and u2 with uniform probability measures.
+```
+
 ## computing_slb.m 
 **computing_slb.m** is a Matlab code computing uGW-slb and dGW-slb with p=1 between each pair of ultrametric spaces with uniform probability measures from a given file **Us.mat** and generates corresponding distance matrices sorted by number of blocks in ultrametric spaces. Before running the code, one should first run either one of the following Matlab codes to generate random ultrametric spaces recorded in file **Us.mat**:
 
