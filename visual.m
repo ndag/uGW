@@ -1,5 +1,4 @@
 function [d,d1] = visual(i,j)
-    %dm is the slb matrix
     load Us.mat;
     Xi = Us{i};
     ui = Xi.ux;
