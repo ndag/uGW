@@ -47,7 +47,7 @@
 %   num_skips - number of skips between two random couplings 
 %   
 % Returns:
-%   res   - the best approximation of the ultrametric Gromov-Wasserstein distance of order p between u1 and u2 with probability measures mu1 and mu2, respectively.
+%   res   - the best approximation of the ultrametric Gromov-Wasserstein distance of order p between ux and uy with probability measures mux and muy, respectively.
 %   plan  - the corresponding coupling
 %   result_vec - a vector containing all stationary points of the gradient descent started from the different couplings
 %   result_plan_cell - the collection of corresponding couplings
