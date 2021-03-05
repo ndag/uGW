@@ -1,17 +1,35 @@
 # uGW
 
 ## ugwslb.m 
-**ugwslb.m** is a Matlab code computing the second lower bound of uGW of two ultrametric spaces with uniform probability measures.
+**ugwslb.m** is a Matlab function computing the second lower bound of uGW of two ultrametric measure spaces.
 
 **Syntax:**
 ```
-% d = ugwslb(u1,u2,p)
-%   u1 - ultrametric distance matrix
-%   u2 - ultrametric distance matrix
-%   p - real number >=1
+% d = ugwslb(u1,u2,mu1,mu2,p)
+%   u1  - ultrametric distance matrix
+%   u2  - ultrametric distance matrix
+%   mu1 - probability vector
+%   mu2 - probability vector
+%   p   - real number >=1
 %
 % Returns:
-%   d - pth-uGW-second lower bound between u1 and u2 with uniform probability measures.
+%   d - pth-uGW-second lower bound between u1 and u2 with probability measures mu1 and mu2, respectively.
+
+## ugwtlb.m 
+**ugwtlb.m** is a Matlab function computing the third lower bound of uGW of two ultrametric measure spaces.
+
+**Syntax:**
+```
+% d = ugwtlb(u1,u2,mu1,mu2,p)
+%   u1  - ultrametric distance matrix
+%   u2  - ultrametric distance matrix
+%   mu1 - probability vector
+%   mu2 - probability vector
+%   p   - real number >=1
+%
+% Returns:
+%   res   - pth-uGW-third lower bound between u1 and u2 with probability measures mu1 and mu2, respectively.
+%   plan  - the corresponding transport plan
 ```
 
 ## computing_slb.m 
