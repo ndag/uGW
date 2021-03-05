@@ -125,7 +125,7 @@
 %   result_plan_cell - the collection of corresponding couplings
 ```
 ## dW_Rp.m.m 
-**dW_Rp.m** is a Matlab function that implements the Wasserstein distance on the real line.
+**dW_Rp.m** is a Matlab function that implements the Wasserstein distance of order p on the real line.
 
 **Syntax:**
 ```
