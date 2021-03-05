@@ -1,33 +1,31 @@
-function d = ugwslb(u1,u2,p)
-%the function calculates the second lower bound of ugw between two
-%ultrametric spaces with uniform measure
-    n1 = length(u1);
-    n2 = length(u2);
-    v1 = reshape(u1,[],1);
-    v2 = reshape(u2,[],1);
-    [GC1,GR1] = groupcounts(v1);
-    [GC2,GR2] = groupcounts(v2);
-
+function d = ugwslb(u1,u2,mu1,mu2, p)
+% the function calculates the second lower bound of ugw between two
+% ultrametric spaces with arbitrary measures
+    
+    [u1_dist,prob1]= distance_distribution(u1,mu1); 
+    [u2_dist,prob2]= distance_distribution(u2,mu2);
+    
     %generate position by taking union
-    pos = union(GR1,GR2);
+    pos = union(u1_dist,u2_dist);
     pos = pos';
     
-    %generate weight; now use uniform measure
 
     n = length(pos);
     w1 = zeros(1,n);
     w2 = zeros(1,n);
-
-    for i = 1: length(GC1)
-        w1(pos == GR1(i)) = GC1(i);
-    end
-
-    for i = 1: length(GC2)
-        w2(pos == GR2(i)) = GC2(i);
-    end
     
-    w1 = w1 ./ (n1 * n1);
-    w2 = w2 ./ (n2 * n2);
+    j = 1;
+    k = 1;
+    for i = 1:n
+       if j<=length(u1_dist) && pos(i)==u1_dist(j)
+           w1(i)=prob1(j);
+           j=j+1;
+       end
+      if k<=length(u2_dist) && pos(i)==u2_dist(k)
+           w2(i)=prob2(k);
+           k=k+1;
+      end
+    end
     
     d = uW_R(pos,w1,w2,p);
     
