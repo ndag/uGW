@@ -32,7 +32,7 @@
 %   coupl  - the corresponding optimal coupling
 ```
 ## ultraGWcgd.m 
-**ultraGWcgd.m** is a Matlab function that approximates the ultrametric Gromov-Wasserstein distance of order p via conditional gradient descent (Frank-Wolfe algorithm with fixed decreasing step size). It is possible to choose multiple random starting points for the gradient descent algorithm.
+**ultraGWcgd.m** is a Matlab function that approximates the ultrametric Gromov-Wasserstein distance of order p via conditional gradient descent (Frank-Wolfe algorithm with fixed decreasing step size). It is possible to start the gradient descent algorithm from multiple random couplings.
 
 **Syntax:**
 ```
