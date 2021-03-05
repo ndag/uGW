@@ -1,7 +1,7 @@
 # uGW
 
 ## ugwslb.m 
-**ugwslb.m** is a Matlab function computing the second lower bound of uGW of two ultrametric measure spaces.
+**ugwslb.m** is a Matlab function for computing the second lower bound of uGW of two ultrametric measure spaces.
 
 **Syntax:**
 ```
@@ -16,7 +16,7 @@
 %   res - pth-uGW-second lower bound between u1 and u2 with probability measures mu1 and mu2, respectively.
 ```
 ## ugwtlb.m 
-**ugwtlb.m** is a Matlab function computing the third lower bound of uGW of two ultrametric measure spaces.
+**ugwtlb.m** is a Matlab function for computing the third lower bound of uGW of two ultrametric measure spaces.
 
 **Syntax:**
 ```
@@ -72,7 +72,7 @@
 # dGW
 
 ## dgwslb.m 
-**dgwslb.m** is a Matlab function computing the second lower bound of dGW of two metric measure spaces.
+**dgwslb.m** is a Matlab function for computing the second lower bound of dGW of two metric measure spaces.
 
 **Syntax:**
 ```
@@ -87,7 +87,7 @@
 %   res - pth-uGW-second lower bound between u1 and u2 with probability measures mu1 and mu2, respectively.
 ```
 ## dgwtlb.m 
-**dgwtlb.m** is a Matlab function computing the third lower bound of dGW of two metric measure spaces.
+**dgwtlb.m** is a Matlab function for computing the third lower bound of dGW of two metric measure spaces.
 
 **Syntax:**
 ```
