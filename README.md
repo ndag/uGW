@@ -5,27 +5,26 @@
 
 **Syntax:**
 ```
-% res = ugwslb(u1,u2,mu1,mu2,p)
-%   u1  - ultrametric distance matrix
-%   u2  - ultrametric distance matrix
-%   mu1 - probability vector
-%   mu2 - probability vector
+% res = ugwslb(ux,uy,mux,muy,p)
+%   ux  - ultrametric distance matrix
+%   uy  - ultrametric distance matrix
+%   mux - probability vector
+%   muy - probability vector
 %   p   - real number >=1
 %
 % Returns:
 %   res - pth-uGW-second lower bound between u1 and u2 with probability measures mu1 and mu2, respectively.
-%   plan  - the corresponding transport plan
 ```
 ## ugwtlb.m 
 **ugwtlb.m** is a Matlab function computing the third lower bound of uGW of two ultrametric measure spaces.
 
 **Syntax:**
 ```
-% [res,coupl] = ugwtlb(u1,u2,mu1,mu2,p)
-%   u1  - ultrametric distance matrix
-%   u2  - ultrametric distance matrix
-%   mu1 - probability vector
-%   mu2 - probability vector
+% [res,coupl] = ugwtlb(ux,uy,mux,muy,p)
+%   ux  - ultrametric distance matrix
+%   uy  - ultrametric distance matrix
+%   mux - probability vector
+%   muy - probability vector
 %   p   - real number >=1
 %
 % Returns:
@@ -59,8 +58,9 @@
 **Syntax:**
 ```
 %  res = uW_R(pos,mu1,mu2,p)
-%   mu1 - probability vector
-%   mu2 - probability vector
+%   pos - joint support of mu1 and mu2
+%   mu1 - probability vector that indicates the mass of mu1 on the corresponding position in the joint support
+%   mu2 - probability vector that indicates the mass of mu2 on the corresponding position in the joint support
 %   p   - real number >=1
 
 %   
@@ -76,27 +76,26 @@
 
 **Syntax:**
 ```
-% res = dgwslb(d1,d2,mu1,mu2,p)
-%   d1  - ultrametric distance matrix
-%   d2  - ultrametric distance matrix
-%   mu1 - probability vector
-%   mu2 - probability vector
+% res = dgwslb(dx,dy,mux,muy,p)
+%   dx  - ultrametric distance matrix
+%   dy  - ultrametric distance matrix
+%   mux - probability vector
+%   muy - probability vector
 %   p   - real number >=1
 %
 % Returns:
 %   res - pth-uGW-second lower bound between u1 and u2 with probability measures mu1 and mu2, respectively.
-%   plan  - the corresponding transport plan
 ```
 ## dgwtlb.m 
 **dgwtlb.m** is a Matlab function computing the third lower bound of dGW of two metric measure spaces.
 
 **Syntax:**
 ```
-% [res,coupl] = dgwtlb(d1,d2,mu1,mu2,p)
-%   d1  - ultrametric distance matrix
-%   d2  - ultrametric distance matrix
-%   mu1 - probability vector
-%   mu2 - probability vector
+% [res,coupl] = dgwtlb(dx,dy,mux,muy,p)
+%   dx  - ultrametric distance matrix
+%   dy  - ultrametric distance matrix
+%   mux - probability vector
+%   muy - probability vector
 %   p   - real number >=1
 %
 % Returns:
