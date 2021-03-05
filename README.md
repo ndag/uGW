@@ -123,7 +123,7 @@
 %   result_vec - a vector containing all stationary points of the gradient descent started from the different couplings
 %   result_plan_cell - the collection of corresponding couplings
 ```
-## dW_Rp.m.m 
+## dW_Rp.m
 **dW_Rp.m** is a Matlab function that implements the Wasserstein distance of order p on the real line.
 
 **Syntax:**
