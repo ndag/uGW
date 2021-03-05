@@ -52,7 +52,7 @@
 %   result_vec - a vector containing all stationary points of the gradient descent started from the different couplings
 %   result_plan_cell - the collection of corresponding couplings
 ```
-## uW_R.m.m 
+## uW_R.m
 **uW_R.m** is a Matlab function that implements the Wasserstein distance on (R,Delta_infinity).
 
 **Syntax:**
