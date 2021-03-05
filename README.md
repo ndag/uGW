@@ -13,7 +13,7 @@
 %   p   - real number >=1
 %
 % Returns:
-%   res - pth-uGW-second lower bound between u1 and u2 with probability measures mu1 and mu2, respectively.
+%   res - pth-uGW-second lower bound between ux and uy with probability measures mux and muy, respectively.
 ```
 ## ugwtlb.m 
 **ugwtlb.m** is a Matlab function for computing the third lower bound of uGW of two ultrametric measure spaces.
@@ -28,7 +28,7 @@
 %   p   - real number >=1
 %
 % Returns:
-%   res    - pth-uGW-third lower bound between u1 and u2 with probability measures mu1 and mu2, respectively.
+%   res    - pth-uGW-third lower bound between ux and uy with probability measures mux and muy, respectively.
 %   coupl  - the corresponding optimal coupling
 ```
 ## ultraGWcgd.m 
@@ -84,7 +84,7 @@
 %   p   - real number >=1
 %
 % Returns:
-%   res - pth-uGW-second lower bound between u1 and u2 with probability measures mu1 and mu2, respectively.
+%   res - pth-uGW-second lower bound between dx and dy with probability measures mux and muy, respectively.
 ```
 ## dgwtlb.m 
 **dgwtlb.m** is a Matlab function for computing the third lower bound of dGW of two metric measure spaces.
@@ -99,7 +99,7 @@
 %   p   - real number >=1
 %
 % Returns:
-%   res    - pth-uGW-third lower bound between u1 and u2 with probability measures mu1 and mu2, respectively.
+%   res    - pth-uGW-third lower bound between dx and dy with probability measures mux and muy, respectively.
 %   coupl  - the corresponding optimal coupling
 ```
 ## dGWcgd.m 
