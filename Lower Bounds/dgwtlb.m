@@ -21,7 +21,7 @@ function [res,plan] = dgwtlb(u1,u2,mu1,mu2, p)
     
     for i =1:m
         for j = 1:n
-            costmat(i,j)= dW_Rp(u1_dist{i},prob1{i},u2_dist{j},prob2{j},p);
+            costmat(i,j)= dW_Rp(u1_dist{i},u2_dist{j},prob1{i},prob2{j},p);
         end
     end
 
