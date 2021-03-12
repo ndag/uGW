@@ -1,3 +1,6 @@
+This is an implementation of notions related to the ultrametric Gromov-Wasserstein distance developed by [Facundo Memoli](https://people.math.osu.edu/memolitechera.1/), [Axel Munk](http://www.stochastik.math.uni-goettingen.de/munk), [Zhengchao Wan](https://math.osu.edu/people/wan.252-0) and Christoph Weitkamp in the paper https://arxiv.org/abs/2101.05756. 
+
+
 # uGW
 
 ## ugwslb.m 
