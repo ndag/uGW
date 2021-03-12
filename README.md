@@ -107,7 +107,7 @@ For comparison, we also include codes for functions related to the usual Gromov-
 %   res    - pth-uGW-third lower bound between dx and dy with probability measures mux and muy, respectively.
 %   coupl  - the corresponding optimal coupling
 ```
-## dW_Rp.m
+### dW_Rp.m
 **dW_Rp.m** is a Matlab function that implements the Wasserstein distance of order p on the real line.
 
 **Syntax:**
