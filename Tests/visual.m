@@ -6,9 +6,12 @@ function [d,d1] = visual(i,j)
     Xj = Us{j};
     uj = Xj.ux;
     nxj = length(uj);
+    mui= ones(1,length(ui))/length(ui);
+    muj= ones(1,length(uj))/length(uj);
+
     
-    d = ugwslb(ui,uj,1);
-    d1 = dgwslb(ui,uj);
+    d = ugwslb(ui,uj,mui,muj,1);
+    d1 = dgwslb(ui,uj,mui,muj,1);
     
     lnkxi = linkage(squareform(ui));
     subplot(2,2,1), dendrogram(lnkxi); title(['Xi ugw-slb=' num2str(d)]);
