@@ -147,15 +147,15 @@ For comparison, we also include codes for functions related to the usual Gromov-
 %   result_plan_cell - the collection of corresponding couplings
 ```
 ## Tests
-In this file, we includes codes for computing uGW-slb and dGW-slb between randomly generated ultrametric spaces.
+In this folder, we include codes for computing uGW-slb and dGW-slb between randomly generated ultrametric spaces.
 ### uGW-test.m 
-**uGW-test.m** is a Matlabscript for computing uSLB,uTLB and uGW between each pair of ultrametric spaces from a given file **Us.mat** with uniform probability measures and generates corresponding distance matrices sorted by number of blocks in ultrametric spaces. Before running the code, one should first run either one of the following Matlab codes to generate random ultrametric spaces recorded in file **Us.mat**:
+**uGW-test.m** is a MATLAB script for computing uSLB,uTLB and uGW between each pair of ultrametric spaces from a given file **Us.mat** (equipped with uniform probability measures) and generates corresponding distance matrices sorted by number of blocks in ultrametric spaces. Before running the code, one should first run either one of the following Matlab codes to generate random ultrametric spaces recorded in file **Us.mat**:
 
 * **test_subsample.m** Subsample ultrametric spaces from some given randomly generated ultrametric spaces.
 * **test_independent.m** Generates ultrametric spaces independently.
 * 
 ### dGW-test.m 
-**dGW-test.m** is a Matlabscript for computing dSLB,dTLB and dGW between each pair of ultrametric spaces from a given file **Us.mat** with uniform probability measures and generates corresponding distance matrices sorted by number of blocks in ultrametric spaces. Before running the code, one should first run either one of the following Matlab codes to generate random ultrametric spaces recorded in file **Us.mat**:
+**dGW-test.m** is a MATLAB script for computing dSLB,dTLB and dGW between each pair of ultrametric spaces from a given file **Us.mat** (equipped with uniform probability measures) and generates corresponding distance matrices sorted by number of blocks in ultrametric spaces. Before running the code, one should first run either one of the following Matlab codes to generate random ultrametric spaces recorded in file **Us.mat**:
 
 * **test_subsample.m** Subsample ultrametric spaces from some given randomly generated ultrametric spaces.
 * **test_independent.m** Generates ultrametric spaces independently.
