@@ -27,4 +27,5 @@ function [res,plan] = dgwtlb(u1,u2,mu1,mu2, p)
 
     
     [res,plan] = mexEMD(mu1.',mu2.',costmat);
+    res = res^(1/p);
 end

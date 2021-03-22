@@ -4,7 +4,7 @@ function [res,plan] = ugwtlb(u1,u2,mu1,mu2, p)
     m = length(mu1);
     n= length(mu2);
     costmat = zeros(m,n);
-    
+
     u1_dist=cell(m);
     prob1=cell(m);
     
@@ -25,7 +25,9 @@ function [res,plan] = ugwtlb(u1,u2,mu1,mu2, p)
         end
     end
     
+    
     [res,plan] = mexEMD(mu1.',mu2.',costmat);
+    res =(res)^(1/p);
 end
 
 

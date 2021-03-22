@@ -13,8 +13,7 @@ function d = uW_R(pos,w1,w2,p)
     
     cw = cumsum(diff);
     cw(n) = [];
-    %cw(1) = [];
     
     
-    d = (0.5*(abs(cw) * abs(posdif)'+ abs(diff) * (pos.^p)'))^(1/p);
+    d = (0.5*(abs(cw) * abs(posdif)'+ abs(diff) * (pos.^p)'));
 end

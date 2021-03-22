@@ -7,6 +7,6 @@ function d = dgwslb(u1,u2,mu1,mu2, p)
     
    
     
-    d = dW_Rp(u1_dist,u2_dist,prob1,prob2,p);
+    d = (dW_Rp(u1_dist,u2_dist,prob1,prob2,p))^(1/p);
     
 end

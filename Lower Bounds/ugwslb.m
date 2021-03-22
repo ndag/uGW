@@ -27,6 +27,6 @@ function d = ugwslb(u1,u2,mu1,mu2, p)
       end
     end
     
-    d = uW_R(pos,w1,w2,p);
+    d = uW_R(pos,w1,w2,p)^(1/p);
     
 end
