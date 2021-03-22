@@ -46,7 +46,7 @@ This is an implementation of notions related to the ultrametric Gromov-Wasserste
 
 %   
 % Returns:
-%   res   - the (R,Delta_infinity)-Wasserstein distance between the probability measures mu1 and mu2.
+%   res   - the (R,Delta_infinity)-Wasserstein distance between the probability measures mu1 and mu2 to the power of p.
 
 ```
 ## uGW-distance
@@ -121,7 +121,7 @@ For comparison, we also include codes for functions related to the usual Gromov-
 
 %   
 % Returns:
-%   res   - the Wasserstein distance between the probability measures mu1 and mu2.
+%   res   - the Wasserstein distance between the probability measures mu1 and mu2 to the power of p.
 
 ```
 ## dGW-distance
@@ -148,8 +148,14 @@ For comparison, we also include codes for functions related to the usual Gromov-
 ```
 ## Tests
 In this file, we includes codes for computing uGW-slb and dGW-slb between randomly generated ultrametric spaces.
-### computing_slb.m 
-**computing_slb.m** is a Matlab code computing uGW-slb and dGW-slb with p=1 between each pair of ultrametric spaces with uniform probability measures from a given file **Us.mat** and generates corresponding distance matrices sorted by number of blocks in ultrametric spaces. Before running the code, one should first run either one of the following Matlab codes to generate random ultrametric spaces recorded in file **Us.mat**:
+### uGW-test.m 
+**uGW-test.m** is a Matlabscript for computing uSLB,uTLB and uGW between each pair of ultrametric spaces from a given file **Us.mat** with uniform probability measures and generates corresponding distance matrices sorted by number of blocks in ultrametric spaces. Before running the code, one should first run either one of the following Matlab codes to generate random ultrametric spaces recorded in file **Us.mat**:
+
+* **test_subsample.m** Subsample ultrametric spaces from some given randomly generated ultrametric spaces.
+* **test_independent.m** Generates ultrametric spaces independently.
+* 
+### dGW-test.m 
+**dGW-test.m** is a Matlabscript for computing dSLB,dTLB and dGW between each pair of ultrametric spaces from a given file **Us.mat** with uniform probability measures and generates corresponding distance matrices sorted by number of blocks in ultrametric spaces. Before running the code, one should first run either one of the following Matlab codes to generate random ultrametric spaces recorded in file **Us.mat**:
 
 * **test_subsample.m** Subsample ultrametric spaces from some given randomly generated ultrametric spaces.
 * **test_independent.m** Generates ultrametric spaces independently.
