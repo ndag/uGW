@@ -1,6 +1,6 @@
-function res = uGWinfty(ux,uy,mux,muy)
+function d = uGWinfty(ux,uy,mux,muy)
 
-res=0;
+d=0;
 
 spec = unique([unique(ux(:)); unique(uy(:))]);
 spec = sort(spec,'descend');
@@ -14,7 +14,7 @@ for c=1:ns
     [subuy,submuy] = quotientUMFPS(uy,muy,t);
     
     if ~is_iso(subux,subuy,submux,submuy)
-        res = spec(max([c-1,1]));
+        d = spec(max([c-1,1]));
         %d = spec(c);
         return
     end
