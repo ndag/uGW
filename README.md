@@ -71,7 +71,20 @@ This is an implementation of notions related to the ultrametric Gromov-Wasserste
 %   result_vec - a vector containing all stationary points of the gradient descent started from the different couplings
 %   result_plan_cell - the collection of corresponding couplings
 ```
+### uGWinfty.m 
+**uGWinfty.m** is a Matlab function that computes the ultrametric Gromov-Wasserstein distance of order p=infinty. The code is adapted from the ultrametric Gromov-Hausdorff distance code from https://github.com/ndag/ultrametrics
 
+**Syntax:**
+```
+% res = uGWinfty(ux,uy,mux,muy)
+%   ux  - ultrametric distance matrix
+%   uy  - ultrametric distance matrix
+%   mux - probability vector
+%   muy - probability vector
+%
+% Returns:
+%   res - infinity-uGW distance between ux and uy with probability measures mux and muy, respectively.
+```
 
 # dGW
 For comparison, we also include codes for functions related to the usual Gromov-Wasserstein distance.
