@@ -1,9 +1,5 @@
 function [uXt, muXt] = quotientUMFPS(uX,muX,t)
 
-% implement a Farthest Point Sampling type of algorithm
-% this is faster than using quotientUM.m which does it via Matlab's cluster
-% function
-
 uXt_big = uX;
 uXt_big(uX<=t) = 0;
 
