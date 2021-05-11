@@ -32,10 +32,12 @@ function b = is_iso(u1,u2,mu1,mu2)
 	for i=1:n
 		indi = find(t1 == i);
 		subu1 = u1(indi,indi);
+        submu1 = mu1(indi);
 		for j=1:n
 			indj = find(t2 == j);
 			subu2 = u2(indj,indj);
-			em(i,j) = is_iso(subu1,subu2);
+            submu2 = mu2(indj)
+			em(i,j) = is_iso(subu1,subu2,submu1,submu2);
 		end
 	end
 
