@@ -186,3 +186,5 @@ In this folder, we include codes for computing uGW-slb and dGW-slb between rando
 %   d - uGW-second lower bound between Us{i} and Us{j}
 %   d1 - dGW-second lower bound between Us{i} and Us{j}
 ```
+### noisy_simulation.m
+**noisy_simulation.m** generates perturbed ultrametric spaces stored in **Us.mat** with given perturbation levels and then generates distance matrices for these spaces via uGW-slb/uGW and dGW-slb/dGW.
