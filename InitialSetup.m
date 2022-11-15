@@ -1,4 +1,4 @@
-% Determine wherethis file's folder is.
+% Determine where this file's folder is.
 folder = fileparts(which('setup.m')); 
 % Add that folder plus all subfolders to the path.
 addpath(genpath(folder));
