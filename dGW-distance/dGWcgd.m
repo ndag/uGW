@@ -1,19 +1,22 @@
-function [result_final,coupl_final,result_vec,result_coupling_cell] = dGWcgd(dx,dy,mu_x,mu_y,p,iterations,num_samples, num_skips)
-% This function approximates the ultrametric Gromov-Wasserstein distance
-% via conditional gradient descent (Frank-Wolfe algorithm with fixed decreasing step size)
+function [res,plan,result_vec,result_plan_cell] = dGWcgd(dx, dy, mu_x, mu_y, p, iterations, num_samples, num_skips)
 
-%   input: ux,uy      ultrametric distance matrices
-%          mu_x,mu_y  weight (row)vectors 
-%          p          order of the GW-distance 
-%          iterations number of iterations 
+% This function approximates the Gromov-Wasserstein distance via conditional gradient descent (Frank-Wolfe algorithm with fixed decreasing step size).
+% It is possible to start the gradient descent algorithm from multiple random couplings.
 
-%
-%   output: 
+%   dx  - distance matrix
+%   dy  - distance matrix
+%   mux - probability vector
+%   muy - probability vector
+%   p   - real number >=1
+%   iterations - number of iterations for the gradient descent
+%   num_samples - number of random starting couplings for the gradient descent (if this is set to 0 only the independece coupling is used)
+%   num_skips - number of skips between two random couplings 
 %   
-%           result          The ultrametric Gromov-Wasserstein distance approximated by
-%                           conditional gradient descent
-%           pi              The optimal coupling approximated by gradient
-%                           descent
+% Returns:
+%   res   - the best approximation of the Gromov-Wasserstein distance of order p between dx and dy with probability measures mux and muy, respectively.
+%   plan  - the corresponding coupling
+%   result_vec - a vector containing all stationary points of the gradient descent started from the different couplings
+%   result_plan_cell - the collection of corresponding couplings
 
 if num_samples >= 1
     [A,b]=gw_equality_constraints(mu_x,mu_y);
@@ -24,7 +27,7 @@ else
 end
 
 result_vec = zeros(1,length(coupls));
-result_coupling_cell=cell(length(coupls));
+result_plan_cell=cell(1,length(coupls));
 
 for index=1:length(coupls)
      pi_old = coupls{index};
@@ -43,7 +46,7 @@ for index=1:length(coupls)
         pi_old =pi_new;
     end
     pi= pi_new;
-    result_coupling_cell{index}=pi;
+    result_plan_cell{index}=pi;
     
     result= 0;
     for i =1:length(dx)
@@ -57,7 +60,7 @@ for index=1:length(coupls)
     end
 result_vec(index)=result^(1/p);
 end
-[result_final, min_index]=min(result_vec);
-coupl_final= result_coupling_cell{min_index};
+[res, min_index]=min(result_vec);
+plan= result_plan_cell{min_index};
 
 end

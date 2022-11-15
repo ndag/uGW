@@ -1,4 +1,15 @@
-function d = uGWinfty(ux,uy,mux,muy)
+function d = uGWinfty(ux, uy, mux, muy)
+
+%   This function computes the ultrametric Gromov-Wasserstein distance of
+%   order p=infinty.
+
+%   ux  - ultrametric distance matrix
+%   uy  - ultrametric distance matrix
+%   mux - probability vector
+%   muy - probability vector
+%
+% Returns:
+%   res - infinity-uGW distance between ux and uy with probability measures mux and muy, respectively.
 
 d=0;
 

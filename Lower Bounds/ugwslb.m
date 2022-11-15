@@ -1,9 +1,18 @@
-function d = ugwslb(u1,u2,mu1,mu2, p)
-% the function calculates the second lower bound of ugw between two
-% ultrametric spaces with arbitrary measures
+function d = ugwslb(ux, uy, mux, muy, p)
+
+%   A function for computing the second lower bound of uGW of two ultrametric measure spaces.
+
+%   ux  - ultrametric distance matrix
+%   uy  - ultrametric distance matrix
+%   mux - probability vector
+%   muy - probability vector
+%   p   - real number >=1
+%
+% Returns:
+%   res - pth-uGW-second lower bound between ux and uy with probability measures mux and muy, respectively.
     
-    [u1_dist,prob1]= distance_distribution(u1,mu1); 
-    [u2_dist,prob2]= distance_distribution(u2,mu2);
+    [u1_dist,prob1]= distance_distribution(ux,mux); 
+    [u2_dist,prob2]= distance_distribution(uy,muy);
     
     %generate position by taking union
     pos = union(u1_dist,u2_dist);

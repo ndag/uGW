@@ -1,9 +1,18 @@
-function d = dgwslb(u1,u2,mu1,mu2, p)
-% the function calculates the second lower bound of dgw between two
-% ultrametric spaces with arbitrary measures
+function d = dgwslb(dx, dy, mux, muy, p)
 
-    [u1_dist,prob1]= distance_distribution(u1,mu1); 
-    [u2_dist,prob2]= distance_distribution(u2,mu2);
+%   A Matlab function for computing the second lower bound of dGW of two metric measure spaces.
+
+%   dx  - ultrametric distance matrix
+%   dy  - ultrametric distance matrix
+%   mux - probability vector
+%   muy - probability vector
+%   p   - real number >=1
+%
+% Returns:
+%   res - pth-uGW-second lower bound between dx and dy with probability measures mux and muy, respectively.
+
+    [u1_dist,prob1]= distance_distribution(dx,mux); 
+    [u2_dist,prob2]= distance_distribution(dy,muy);
     
    
     

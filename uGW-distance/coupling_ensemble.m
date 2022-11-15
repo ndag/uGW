@@ -1,4 +1,5 @@
 function [Markov_steps]=coupling_ensemble(A,b,mux,muy,num_samples,num_skips,mu_initial)
+
     % Inputs: equality constraints A,b; probability vectors p,q; number of steps
     %         to take in the Markov chain; initialization
     % Output: Ensemble of couplings from the probability simplex.

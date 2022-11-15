@@ -40,7 +40,6 @@ void free_vec(vec& A, const double *ptr){
 
 
 
-// Hier beginnt der essentielle Code
 
 void timestamp()
 {
@@ -79,9 +78,8 @@ for (size_t i=0; i<n; i++){
         double tmp=0;
         for (size_t k=0; k<n; k++){
             for (size_t l=0; l<m; l++){
-                tmp=tmp+delta_infinity(ux.at(i,k),uy.at(j,l))*coupling.at(k,l);
-               // std::cout <<"delta_infinity(ux[i,k],uy[j,l])^p:"<<pow(delta_infinity(ux[i,k],uy[j,l]),p)<<std::endl;
-            }
+                tmp=tmp+delta_infinity(ux.at(i,k),uy.at(j,l))*coupling.at(k,l); 
+                }
         }
         cost_mat.at(i,j)=2*tmp;
         /*std::cout <<"cost_mat(i,j):"<<cost_mat[i,j]<<std::endl;
@@ -95,7 +93,7 @@ for (size_t i=0; i<n; i++){
   return(cost_mat);
 }
 
-// Hier endet der essentielle Code. 
+// 
 
 void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]) {
   //timestamp();

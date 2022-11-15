@@ -1,8 +1,8 @@
 function [mu_new]=markov_hit_and_run_step(A,b,P,mux,muy,mu_initial)
-    % Input: equality constraints A,b from gw_equality_constraints; pair of
-    %       probability vectors p, q; initialization
-    %        P is a projection matrix onto row space of A.
-    % Output: new coupling measure after a hit-and-run step.
+    % Input: equality constraints A,b from gw_equality_constraints;  P is a projection matrix onto row space of A;
+    %        pair of probability vectors mux, muy; initialization.
+    %       
+    % Output: new coupling of mux and muy after one hit-and-run step.
 
     m = length(mux);
     n = length(muy);
