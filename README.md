@@ -166,7 +166,7 @@ In this folder, we include codes for computing uGW-slb and dGW-slb between rando
 
 * **test_subsample.m** Subsample ultrametric spaces from some given randomly generated ultrametric spaces.
 * **test_independent.m** Generates ultrametric spaces independently.
-* 
+
 ### dGW-test.m 
 **dGW-test.m** is a MATLAB script for computing dSLB,dTLB and dGW between each pair of ultrametric spaces from a given file **Us.mat** (equipped with uniform probability measures) and generates corresponding distance matrices sorted by number of blocks in ultrametric spaces. Before running the code, one should first run either one of the following Matlab codes to generate random ultrametric spaces recorded in file **Us.mat**:
 
